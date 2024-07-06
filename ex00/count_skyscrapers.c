@@ -1,15 +1,18 @@
-int	count_up_down(int arr[4][4], int col);
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   count_skyscrapers.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: juaho <juaho@student.hive.fi>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/06 14:51:43 by juaho             #+#    #+#             */
+/*   Updated: 2024/07/06 14:53:06 by juaho            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int count_down_up(int arr[4][4], int col);
+#include "count_skyscrapers.h"
 
-int count_left_right(int arr[4][4], int row);
-
-int count_right_left(int arr[4][4], int row);
-
-// col_row_selection arguments: 0-3 for the four views from the top,
-//  4-7 for the four views from the bottom, 8-11 from the left,
-//  12-15 from the right
-int count_skyscrapers(int arr[4][4], int col_row_selection)
+int	count_skyscrapers(int arr[4][4], int col_row_selection)
 {
 	if (col_row_selection >= 0 && col_row_selection <= 3)
 		return (count_up_down(arr, col_row_selection));
@@ -22,11 +25,11 @@ int count_skyscrapers(int arr[4][4], int col_row_selection)
 	return (-1);
 }
 
-int count_up_down(int arr[4][4], int col)
+int	count_up_down(int arr[4][4], int col)
 {
-	int max;
-	int sum;
-	int i;
+	int	max;
+	int	sum;
+	int	i;
 
 	max = 0;
 	sum = 0;
@@ -43,11 +46,11 @@ int count_up_down(int arr[4][4], int col)
 	return (sum);
 }
 
-int count_down_up(int arr[4][4], int col)
+int	count_down_up(int arr[4][4], int col)
 {
-	int max;
-	int sum;
-	int i;
+	int	max;
+	int	sum;
+	int	i;
 
 	max = 0;
 	sum = 0;
@@ -64,11 +67,11 @@ int count_down_up(int arr[4][4], int col)
 	return (sum);
 }
 
-int count_left_right(int arr[4][4], int row)
+int	count_left_right(int arr[4][4], int row)
 {
-	int max;
-	int sum;
-	int i;
+	int	max;
+	int	sum;
+	int	i;
 
 	max = 0;
 	sum = 0;
@@ -85,11 +88,11 @@ int count_left_right(int arr[4][4], int row)
 	return (sum);
 }
 
-int count_right_left(int arr[4][4], int row)
+int	count_right_left(int arr[4][4], int row)
 {
-	int max;
-	int sum;
-	int i;
+	int	max;
+	int	sum;
+	int	i;
 
 	max = 0;
 	sum = 0;
