@@ -1,35 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   validate.c                                         :+:      :+:    :+:   */
+/*   validate.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juaho <juaho@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/06 14:55:27 by juaho             #+#    #+#             */
-/*   Updated: 2024/07/06 15:43:47 by juaho            ###   ########.fr       */
+/*   Created: 2024/07/06 15:12:31 by juaho             #+#    #+#             */
+/*   Updated: 2024/07/06 15:19:26 by juaho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "count_skyscrapers.h"
-#include <stdio.h>
+#ifndef VALIDATE_H
+# define VALIDATE_H
 
-int	validate(int solution[4][4], int clues[4][4])
-{
-	int	x;
-	int	y;
+int	validate(int solution[4][4], int clues[4][4]);
 
-	y = 0;
-	while (y < 4)
-	{
-		x = 0;
-		while (x < 4)
-		{
-			printf("checking view %d \n", x + 4 * y);
-			if (count_skyscrapers(solution, y * 4 + x) != clues[y][x])
-				return (0);
-			x++;
-		}
-		y++;
-	}
-	return (1);
-}
+#endif

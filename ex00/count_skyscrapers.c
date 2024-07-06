@@ -6,7 +6,7 @@
 /*   By: juaho <juaho@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 14:51:43 by juaho             #+#    #+#             */
-/*   Updated: 2024/07/06 14:53:06 by juaho            ###   ########.fr       */
+/*   Updated: 2024/07/06 15:40:10 by juaho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	count_skyscrapers(int arr[4][4], int col_row_selection)
 	return (-1);
 }
 
-int	count_up_down(int arr[4][4], int col)
+int	count_up_down(int arr[4][4], int row)
 {
 	int	max;
 	int	sum;
@@ -36,9 +36,9 @@ int	count_up_down(int arr[4][4], int col)
 	i = 0;
 	while (i < 4)
 	{
-		if (arr[i][col] > max)
+		if (arr[row][i] > max)
 		{
-			max = arr[i][col];
+			max = arr[row][i];
 			sum++;
 		}
 		i++;
@@ -46,7 +46,7 @@ int	count_up_down(int arr[4][4], int col)
 	return (sum);
 }
 
-int	count_down_up(int arr[4][4], int col)
+int	count_down_up(int arr[4][4], int row)
 {
 	int	max;
 	int	sum;
@@ -57,9 +57,9 @@ int	count_down_up(int arr[4][4], int col)
 	i = 3;
 	while (i >= 0)
 	{
-		if (arr[i][col] > max)
+		if (arr[row][i] > max)
 		{
-			max = arr[i][col];
+			max = arr[row][i];
 			sum++;
 		}
 		i--;
@@ -67,7 +67,7 @@ int	count_down_up(int arr[4][4], int col)
 	return (sum);
 }
 
-int	count_left_right(int arr[4][4], int row)
+int	count_left_right(int arr[4][4], int col)
 {
 	int	max;
 	int	sum;
@@ -78,9 +78,9 @@ int	count_left_right(int arr[4][4], int row)
 	i = 0;
 	while (i < 4)
 	{
-		if (arr[row][i] > max)
+		if (arr[i][col] > max)
 		{
-			max = arr[row][i];
+			max = arr[i][col];
 			sum++;
 		}
 		i++;
@@ -88,7 +88,7 @@ int	count_left_right(int arr[4][4], int row)
 	return (sum);
 }
 
-int	count_right_left(int arr[4][4], int row)
+int	count_right_left(int arr[4][4], int col)
 {
 	int	max;
 	int	sum;
@@ -99,9 +99,9 @@ int	count_right_left(int arr[4][4], int row)
 	i = 3;
 	while (i >= 0)
 	{
-		if (arr[row][i] > max)
+		if (arr[i][col] > max)
 		{
-			max = arr[row][i];
+			max = arr[i][col];
 			sum++;
 		}
 		i--;
