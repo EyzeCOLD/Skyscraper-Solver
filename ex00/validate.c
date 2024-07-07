@@ -6,7 +6,7 @@
 /*   By: juaho <juaho@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 14:55:27 by juaho             #+#    #+#             */
-/*   Updated: 2024/07/07 15:05:00 by juaho            ###   ########.fr       */
+/*   Updated: 2024/07/07 21:46:12 by juaho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,6 @@ int	validate(int solution[4][4], int clues[4][4])
 		y++;
 	}
 	if (detect_repeats(solution))
-		return(0);
+		return (0);
 	return (1);
 }

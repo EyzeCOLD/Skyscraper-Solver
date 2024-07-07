@@ -6,7 +6,7 @@
 /*   By: juaho <juaho@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/07 18:37:49 by juaho             #+#    #+#             */
-/*   Updated: 2024/07/07 21:20:41 by juaho            ###   ########.fr       */
+/*   Updated: 2024/07/07 21:47:23 by juaho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	init_solution(int arr[4][4], int rows_list[24][4], int row_comp[4])
 	}
 }
 
-int		next_solution(int arr[4][4], int rows_list[24][4], int row_comp[4])
+int	next_solution(int arr[4][4], int rows_list[24][4], int row_comp[4])
 {
 	int	row;
 	int	digit;
