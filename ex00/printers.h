@@ -13,6 +13,8 @@
 #ifndef PRINTERS_H
 # define PRINTERS_H
 
+void print_error_msg(void)
+
 void print_char(char c)
 
 void print_board(int board[4][4])

@@ -1,51 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printers.c                                         :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhurtamo <mhurtamo@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/07 18:37:56 by mhurtamo          #+#    #+#             */
-/*   Updated: 2024/07/07 20:20:38 by mhurtamo         ###   ########.fr       */
+/*   Created: 2024/07/07 20:03:27 by mhurtamo          #+#    #+#             */
+/*   Updated: 2024/07/07 20:24:05 by mhurtamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <init_clues.h>
+#include <row_loader.h>
 
-void	print_error_msg(void)
+int	main(int argc, char **argv)
 {
-	write(1, "Error\n", 6);
-}
-
-void	print_char(char c)
-{
-	write(1, &c, 1);
-}
-
-void	print_board(int board[4][4])
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	while (i < 4)
+	int	clues[4][4];
+	char	*first;
+	char	*second;
+	if(argc != 2 || init_clues(argv[1], clues) != 1)
 	{
-		j = 0;
-		while (j < 4)
-		{
-			if (j == 3)
-			{
-				print_char(board[i][j] + '0');
-				j++;
-			}
-			else
-			{
-				print_char(board[i][j] + '0');
-				write(1, " ", 1);
-				j++;
-			}
-		}
-		write(1, "\n", 1);
-		i++;
+		print_error_msg();	
+		return (0);
 	}
+	first = "432134214231243132412341431234124132143231421342";
+	second = "421324134123142321431243321423143124132421341234";
+	row_loader(first, second, possible_rows);
 }
