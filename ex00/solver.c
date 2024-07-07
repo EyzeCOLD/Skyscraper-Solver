@@ -6,9 +6,11 @@
 /*   By: juaho <juaho@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/07 18:37:49 by juaho             #+#    #+#             */
-/*   Updated: 2024/07/07 20:08:45 by juaho            ###   ########.fr       */
+/*   Updated: 2024/07/07 21:20:41 by juaho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "solver.h"
 
 void	init_solution(int arr[4][4], int rows_list[24][4], int row_comp[4])
 {
@@ -17,7 +19,10 @@ void	init_solution(int arr[4][4], int rows_list[24][4], int row_comp[4])
 
 	row = 0;
 	while (row < 4)
-		row_comp[i] = 4 - i++;
+	{
+		row_comp[row] = 4 - row;
+		row++;
+	}
 	row = 0;
 	while (row < 4)
 	{
@@ -31,13 +36,14 @@ void	init_solution(int arr[4][4], int rows_list[24][4], int row_comp[4])
 	}
 }
 
-void	next_solution(int arr[4][4], int rows_list[24][4], int row_comp[4])
+int		next_solution(int arr[4][4], int rows_list[24][4], int row_comp[4])
 {
 	int	row;
 	int	digit;
 
 	row = 0;
-	increment_row_comp(row_comp);
+	if (increment_row_comp(row_comp) == -1)
+		return (-1);
 	while (row < 4)
 	{
 		digit = 0;
@@ -48,6 +54,7 @@ void	next_solution(int arr[4][4], int rows_list[24][4], int row_comp[4])
 		}
 		row++;
 	}
+	return (0);
 }
 
 int	increment_row_comp(int row_comp[4])

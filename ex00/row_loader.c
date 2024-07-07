@@ -6,13 +6,13 @@
 /*   By: tpinarli <tpinarli@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/07 18:39:16 by tpinarli          #+#    #+#             */
-/*   Updated: 2024/07/07 20:46:50 by tpinarli         ###   ########.fr       */
+/*   Updated: 2024/07/07 21:05:20 by juaho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	row_loader(char *str1, char *str2, int possible_rows[24][4])
+void	row_loader(char *str1, char *str2, int possible_rows[24][4])
 {
 	int	row;
 	int	digit;
@@ -34,7 +34,6 @@ int	row_loader(char *str1, char *str2, int possible_rows[24][4])
 		}
 		row++;
 	}
-	return (0);
 }
 
 /*int	main()
