@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   validate.c                                         :+:      :+:    :+:   */
+/*   generate_row_permutations.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juaho <juaho@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/06 14:55:27 by juaho             #+#    #+#             */
-/*   Updated: 2024/07/07 12:32:24 by juaho            ###   ########.fr       */
+/*   Created: 2024/07/06 18:08:35 by juaho             #+#    #+#             */
+/*   Updated: 2024/07/06 20:20:18 by juaho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "count_skyscrapers.h"
-
-int	validate_clues(int solution[4][4], int clues[4][4])
+int	*generate_row_permutations(char *str, int *row_permutations[24][4])
 {
-	int	x;
-	int	y;
+	int	i;
+	int	j;
 
-	y = 0;
-	while (y < 4)
+	i = 0;
+	j = 0;
+	while (str[i])
 	{
-		x = 0;
-		while (x < 4)
+		while (j < 5)
 		{
-			if (count_skyscrapers(solution, y * 4 + x) != clues[y][x])
-				return (0);
-			x++;
+			if (j < 4)
+				*row_permutations[i][j] = str[i] - '0';
+			j++;
 		}
-		y++;
+		i++;
 	}
-	return (1);
+	return (row_permutations);
 }

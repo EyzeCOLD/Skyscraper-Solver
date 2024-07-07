@@ -6,7 +6,7 @@
 /*   By: juaho <juaho@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 14:51:43 by juaho             #+#    #+#             */
-/*   Updated: 2024/07/06 15:40:10 by juaho            ###   ########.fr       */
+/*   Updated: 2024/07/07 12:07:52 by juaho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,9 @@ int	count_up_down(int arr[4][4], int row)
 	i = 0;
 	while (i < 4)
 	{
-		if (arr[row][i] > max)
+		if (arr[i][row] > max)
 		{
-			max = arr[row][i];
+			max = arr[i][row];
 			sum++;
 		}
 		i++;
@@ -57,9 +57,9 @@ int	count_down_up(int arr[4][4], int row)
 	i = 3;
 	while (i >= 0)
 	{
-		if (arr[row][i] > max)
+		if (arr[i][row] > max)
 		{
-			max = arr[row][i];
+			max = arr[i][row];
 			sum++;
 		}
 		i--;
@@ -78,9 +78,9 @@ int	count_left_right(int arr[4][4], int col)
 	i = 0;
 	while (i < 4)
 	{
-		if (arr[i][col] > max)
+		if (arr[col][i] > max)
 		{
-			max = arr[i][col];
+			max = arr[col][i];
 			sum++;
 		}
 		i++;
@@ -99,9 +99,9 @@ int	count_right_left(int arr[4][4], int col)
 	i = 3;
 	while (i >= 0)
 	{
-		if (arr[i][col] > max)
+		if (arr[col][i] > max)
 		{
-			max = arr[i][col];
+			max = arr[col][i];
 			sum++;
 		}
 		i--;
