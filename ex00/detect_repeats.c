@@ -6,7 +6,7 @@
 /*   By: juaho <juaho@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/07 12:32:41 by juaho             #+#    #+#             */
-/*   Updated: 2024/07/07 16:10:19 by tpinarli         ###   ########.fr       */
+/*   Updated: 2024/07/07 18:14:45 by juaho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	detect_repeats_col(int solution[4][4], int col)
 	while (i < 4)
 	{
 		sum += solution[i][col];
-		product *= solution[col][i];
+		product *= solution[i][col];
 		i++;
 	}
 	if (sum != 10 || product != 24)

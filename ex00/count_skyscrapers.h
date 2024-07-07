@@ -6,7 +6,7 @@
 /*   By: juaho <juaho@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 14:36:48 by juaho             #+#    #+#             */
-/*   Updated: 2024/07/06 14:54:35 by juaho            ###   ########.fr       */
+/*   Updated: 2024/07/07 17:45:40 by juaho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@
 // 8-11 from the left and 
 // 12-15 from the right.
 
+int	count_skyscrapers(int arr[4][4], int col_row_selection);
+
 int	count_up_down(int arr[4][4], int col);
 
 int	count_down_up(int arr[4][4], int col);
@@ -27,7 +29,5 @@ int	count_down_up(int arr[4][4], int col);
 int	count_left_right(int arr[4][4], int col);
 
 int	count_right_left(int arr[4][4], int col);
-
-int	count_skyscrapers(int arr[4][4], int col_row_selection);
 
 #endif
