@@ -6,11 +6,9 @@
 /*   By: tpinarli <tpinarli@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/07 18:39:16 by tpinarli          #+#    #+#             */
-/*   Updated: 2024/07/07 21:05:20 by juaho            ###   ########.fr       */
+/*   Updated: 2024/07/07 22:03:46 by juaho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 void	row_loader(char *str1, char *str2, int possible_rows[24][4])
 {
@@ -35,31 +33,3 @@ void	row_loader(char *str1, char *str2, int possible_rows[24][4])
 		row++;
 	}
 }
-
-/*int	main()
-{
-	char	first_12_rows;
-	char	second_12_rows;
-	char	*first;
-	char	*second;
-	int	i;
-	int	j;
-	int	possible_rows[24][4];
-
-	first =  "432134214231243132412341431234124132143231421342";
-	second = "421324134123142321431243321423143124132421341234";
-	row_loader(first, second, possible_rows);
-	i = 0;
-	while(i < 24)
-	{
-		j = 0;
-		while(j < 4)
-		{
-			printf("%d", possible_rows[i][j]);
-			j++;
-		}
-		printf("\n");
-		i++;
-	}
-	
-}*/

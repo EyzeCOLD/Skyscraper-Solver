@@ -6,7 +6,7 @@
 /*   By: mhurtamo <mhurtamo@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/07 20:03:27 by mhurtamo          #+#    #+#             */
-/*   Updated: 2024/07/07 21:45:17 by juaho            ###   ########.fr       */
+/*   Updated: 2024/07/07 22:00:52 by juaho            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 #include "validate.h"
 #include "printers.h"
 #include "solver.h"
-#include <stdlib.h>
 
 void	load_the_rows(int possible_rows[24][4]);
 
