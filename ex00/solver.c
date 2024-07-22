@@ -20,7 +20,7 @@ void	init_solution(int arr[4][4], int rows_list[24][4], int row_comp[4])
 	row = 0;
 	while (row < 4)
 	{
-		row_comp[row] = 4 - row;
+		row_comp[row] = 3 - row;
 		row++;
 	}
 	row = 0;
